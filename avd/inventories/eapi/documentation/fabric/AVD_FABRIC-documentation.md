@@ -17,12 +17,12 @@
 
 | POD | Type | Node | Management IP | Platform | Provisioned in CloudVision |
 | --- | ---- | ---- | ------------- | -------- | -------------------------- |
-| AVD_FABRIC | l3leaf | AVD-LEAF1 | 172.20.20.4/24 | cEOS | Provisioned |
-| AVD_FABRIC | l3leaf | AVD-LEAF2 | 172.20.20.2/24 | cEOS | Provisioned |
-| AVD_FABRIC | l3leaf | AVD-LEAF3 | 172.20.20.9/24 | cEOS | Provisioned |
-| AVD_FABRIC | l3leaf | AVD-LEAF4 | 172.20.20.8/24 | cEOS | Provisioned |
-| AVD_FABRIC | spine | AVD-SPINE1 | 172.20.20.5/24 | cEOS | Provisioned |
-| AVD_FABRIC | spine | AVD-SPINE2 | 172.20.20.6/24 | cEOS | Provisioned |
+| AVD_FABRIC | l3leaf | AVD-LEAF1 | 172.20.20.6/24 | cEOS | Provisioned |
+| AVD_FABRIC | l3leaf | AVD-LEAF2 | 172.20.20.8/24 | cEOS | Provisioned |
+| AVD_FABRIC | l3leaf | AVD-LEAF3 | 172.20.20.3/24 | cEOS | Provisioned |
+| AVD_FABRIC | l3leaf | AVD-LEAF4 | 172.20.20.4/24 | cEOS | Provisioned |
+| AVD_FABRIC | spine | AVD-SPINE1 | 172.20.20.2/24 | cEOS | Provisioned |
+| AVD_FABRIC | spine | AVD-SPINE2 | 172.20.20.5/24 | cEOS | Provisioned |
 
 > Provision status is based on Ansible inventory declaration and do not represent real status from CloudVision.
 

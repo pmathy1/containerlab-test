@@ -8,9 +8,9 @@ AVD:
             type: spine
           hosts:
             AVD-SPINE1:
-              ansible_host: 172.20.20.5
+              ansible_host: 172.20.20.2
             AVD-SPINE2:
-              ansible_host: 172.20.20.6
+              ansible_host: 172.20.20.5
 
         AVD_L3LEAFS:
           vars:
@@ -19,15 +19,15 @@ AVD:
             AVD_LEAF12:
               hosts:
                 AVD-LEAF1:
-                  ansible_host: 172.20.20.4
+                  ansible_host: 172.20.20.6
                 AVD-LEAF2:
-                  ansible_host: 172.20.20.2
+                  ansible_host: 172.20.20.8
             AVD_LEAF34:
               hosts:
                 AVD-LEAF3:
-                  ansible_host: 172.20.20.9
+                  ansible_host: 172.20.20.3
                 AVD-LEAF4:
-                  ansible_host: 172.20.20.8
+                  ansible_host: 172.20.20.4
 
     AVD_TENANTS_NETWORKS:
       children:

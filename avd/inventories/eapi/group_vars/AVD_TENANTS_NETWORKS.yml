@@ -1,0 +1,50 @@
+---
+# AVD Tenants Networks
+# Documentation of Tenant specific information - Vlans/VRFs
+tenants:
+  # Tenant A Specific Information - VRFs / VLANs
+  Tenant_A:
+    mac_vrf_vni_base: 10000
+    vrfs:
+      Tenant_A_VRF1:
+        vrf_vni: 10
+        vtep_diagnostic:
+          loopback: 100
+          loopback_ip_range: 10.255.1.0/24
+        svis:
+          110:
+            name: Tenant_A_Zone11
+            tags: [azone11]
+            enabled: true
+            ip_address_virtual: 10.1.10.1/24
+          111:
+            name: Tenant_A_Zone12
+            tags: [azone12]
+            enabled: true
+            ip_address_virtual: 10.1.11.1/24
+
+      Tenant_A_VRF2:
+        vrf_vni: 11
+        svis:
+          120:
+            name: Tenant_A_Zone_21
+            tags: [azone21]
+            enabled: true
+            ip_address_virtual: 10.1.20.1/24
+
+  # Tenant B Specific Information - VRFs / VLANs
+  Tenant_B:
+    mac_vrf_vni_base: 20000
+    vrfs:
+      Tenant_B_VRF1:
+        vrf_vni: 20
+        svis:
+          210:
+            name: Tenant_B_Zone1
+            tags: [bzone1]
+            enabled: true
+            ip_address_virtual: 10.2.10.1/24
+    l2vlans:
+      260:
+        name: Tenant_B_VMOTION
+        tags: [vmotion]

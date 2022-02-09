@@ -29,10 +29,10 @@ spine:
   nodes:
     AVD-SPINE1:
       id: 1
-      mgmt_ip: 172.20.20.5/24
+      mgmt_ip: 172.20.20.2/24
     AVD-SPINE2:
       id: 2
-      mgmt_ip: 172.20.20.6/24
+      mgmt_ip: 172.20.20.5/24
 
 l3leaf:
   defaults:
@@ -60,12 +60,12 @@ l3leaf:
       nodes:
         AVD-LEAF1:
           id: 1
-          mgmt_ip: 172.20.20.4/24
+          mgmt_ip: 172.20.20.6/24
           # Interface configured on SPINES to connect to this leaf
           uplink_switch_interfaces: [Ethernet1, Ethernet1]
         AVD-LEAF2:
           id: 2
-          mgmt_ip: 172.20.20.2/24
+          mgmt_ip: 172.20.20.8/24
           # Interface configured on SPINES to connect to this leaf
           uplink_switch_interfaces: [Ethernet2, Ethernet2]
     AVD_LEAF34:
@@ -73,12 +73,12 @@ l3leaf:
       nodes:
         AVD-LEAF3:
           id: 3
-          mgmt_ip: 172.20.20.9/24
+          mgmt_ip: 172.20.20.3/24
           # Interface configured on SPINES to connect to this leaf
           uplink_switch_interfaces: [Ethernet3, Ethernet3]
         AVD-LEAF4:
           id: 4
-          mgmt_ip: 172.20.20.8/24
+          mgmt_ip: 172.20.20.4/24
           # Interface configured on SPINES to connect to this leaf
           uplink_switch_interfaces: [Ethernet4, Ethernet4]
 
