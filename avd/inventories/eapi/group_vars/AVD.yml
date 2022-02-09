@@ -1,0 +1,27 @@
+---
+# local users
+local_users:
+  # Username with no password configured
+  admin:
+    privilege: 15
+    role: network-admin
+    sha512_password: "$6$BySnPqEQp3mz.alz$G.gXNt0w3S5SYyQMVFeTAG2gwjxtzYZdAAC8i/iB2qDv3MAk3QCm6FalsFoXyIx8epKRdhT/GymS0AFisbhTA0"
+
+# OOB Management network default gateway.
+mgmt_gateway: 172.20.20.1
+mgmt_destination_networks:
+  - 0.0.0.0/0
+
+# dns servers.
+name_servers:
+  - 1.1.1.1
+  - 8.8.8.8
+
+# NTP Servers IP or DNS name, first NTP server will be prefered, and sourced from Managment VRF
+ntp:
+  servers:
+  - name: uk.pool.ntp.org
+    preferred: true
+    vrf: MGMT
+  - name: fr.pool.ntp.org
+    vrf: MGMT

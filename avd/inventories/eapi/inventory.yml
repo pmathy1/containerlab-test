@@ -1,0 +1,48 @@
+---
+AVD:
+  children:
+    AVD_FABRIC:
+      children:
+        AVD_SPINES:
+          vars:
+            type: spine
+          hosts:
+            AVD-SPINE1:
+              ansible_host: 172.20.20.5
+            AVD-SPINE2:
+              ansible_host: 172.20.20.6
+
+        AVD_L3LEAFS:
+          vars:
+            type: l3leaf
+          children:
+            AVD_LEAF12:
+              hosts:
+                AVD-LEAF1:
+                  ansible_host: 172.20.20.4
+                AVD-LEAF2:
+                  ansible_host: 172.20.20.2
+            AVD_LEAF34:
+              hosts:
+                AVD-LEAF3:
+                  ansible_host: 172.20.20.9
+                AVD-LEAF4:
+                  ansible_host: 172.20.20.8
+
+    AVD_TENANTS_NETWORKS:
+      children:
+        AVD_L3LEAFS:
+        
+    AVD_SERVERS:
+      children:
+        AVD_L3LEAFS:
+
+  vars:
+    ansible_connection: ansible.netcommon.httpapi
+    ansible_httpapi_use_ssl: true
+    ansible_httpapi_validate_certs: no
+    ansible_become: true
+    ansible_become_method: enable
+    ansible_network_os: arista.eos.eos
+    ansible_user: admin
+    ansible_password: admin
