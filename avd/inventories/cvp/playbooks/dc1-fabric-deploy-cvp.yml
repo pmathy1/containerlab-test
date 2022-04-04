@@ -3,6 +3,8 @@
   hosts: DC1_FABRIC
   connection: local
   gather_facts: false
+  vars:
+    root_dir: '/workspaces/containerlab-test/avd/inventories/cvp/output'
   collections:
     - arista.avd
     - arista.cvp
